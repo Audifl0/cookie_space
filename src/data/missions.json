@@ -1,0 +1,88 @@
+{
+  "missions": [
+    {
+      "id": "daily_kill_50",
+      "name": "Cookie Crusher",
+      "kind": "daily",
+      "goal": { "event": "kill", "count": 50 },
+      "reward": { "gold": 25 }
+    },
+    {
+      "id": "daily_kill_chip_drones",
+      "name": "Drone Hunter",
+      "kind": "daily",
+      "goal": { "event": "kill", "where": "chip_drone", "count": 30 },
+      "reward": { "gold": 20 }
+    },
+    {
+      "id": "daily_no_hit_waves",
+      "name": "Untouchable",
+      "kind": "daily",
+      "goal": { "event": "no_hit", "count": 3 },
+      "reward": { "gold": 30 }
+    },
+    {
+      "id": "daily_earn_gold",
+      "name": "Gold Digger",
+      "kind": "daily",
+      "goal": { "event": "earn_gold", "count": 100 },
+      "reward": { "gold": 15 }
+    },
+    {
+      "id": "daily_reach_wave_10",
+      "name": "Wave Rider",
+      "kind": "daily",
+      "goal": { "event": "reach_wave", "count": 10 },
+      "reward": { "gold": 40 }
+    },
+    {
+      "id": "weekly_kill_500",
+      "name": "Cookie Apocalypse",
+      "kind": "weekly",
+      "goal": { "event": "kill", "count": 500 },
+      "reward": { "gold": 150 }
+    },
+    {
+      "id": "weekly_boss_fast",
+      "name": "Speed Slayer",
+      "kind": "weekly",
+      "goal": { "event": "kill", "where": "boss", "count": 1 },
+      "reward": { "gold": 100, "title": "Speedrunner" }
+    },
+    {
+      "id": "weekly_earn_gold",
+      "name": "Wealthy Baker",
+      "kind": "weekly",
+      "goal": { "event": "earn_gold", "count": 1000 },
+      "reward": { "gold": 200 }
+    },
+    {
+      "id": "longterm_wave_30",
+      "name": "Survivor",
+      "kind": "longterm",
+      "goal": { "event": "reach_wave", "count": 30 },
+      "reward": { "gold": 500, "skinId": "cosmic_baker" }
+    },
+    {
+      "id": "longterm_gold_10k",
+      "name": "Cookie Tycoon",
+      "kind": "longterm",
+      "goal": { "event": "earn_gold", "count": 10000 },
+      "reward": { "gold": 1000, "skinId": "golden_ship" }
+    },
+    {
+      "id": "longterm_kill_5k",
+      "name": "Cookie Annihilator",
+      "kind": "longterm",
+      "goal": { "event": "kill", "count": 5000 },
+      "reward": { "gold": 800, "title": "Destroyer" }
+    },
+    {
+      "id": "longterm_all_bosses",
+      "name": "Boss Master",
+      "kind": "longterm",
+      "goal": { "event": "kill", "where": "boss", "count": 5 },
+      "reward": { "gold": 600, "skinId": "boss_hunter" }
+    }
+  ]
+}

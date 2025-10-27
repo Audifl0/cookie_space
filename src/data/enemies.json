@@ -1,0 +1,142 @@
+{
+  "enemies": [
+    {
+      "id": "chip_drone",
+      "name": "Chip Drone",
+      "hp": 12,
+      "speed": 90,
+      "damage": 5,
+      "sprite": "chip_drone",
+      "behaviors": ["seek"],
+      "loot": { "goldMin": 1, "goldMax": 3, "dropRate": 0.6 },
+      "tags": ["cookie", "small", "basic"]
+    },
+    {
+      "id": "oreo_orbiter",
+      "name": "Oréo-Orbiter",
+      "hp": 20,
+      "speed": 60,
+      "damage": 6,
+      "sprite": "oreo_orbiter",
+      "behaviors": ["orbit", "burst"],
+      "loot": { "goldMin": 2, "goldMax": 4, "dropRate": 0.5 },
+      "tags": ["cookie", "orbiter", "ranged"]
+    },
+    {
+      "id": "macaron_mine",
+      "name": "Macaron Mine",
+      "hp": 8,
+      "speed": 30,
+      "damage": 15,
+      "sprite": "macaron_mine",
+      "behaviors": ["mine"],
+      "onDeath": {
+        "explode": { "radius": 50, "dmg": 20 }
+      },
+      "loot": { "goldMin": 3, "goldMax": 5, "dropRate": 0.7 },
+      "tags": ["cookie", "explosive", "mine"]
+    },
+    {
+      "id": "biscotti_bomber",
+      "name": "Biscotti Bomber",
+      "hp": 35,
+      "speed": 50,
+      "damage": 8,
+      "sprite": "biscotti_bomber",
+      "behaviors": ["orbit", "burst"],
+      "loot": { "goldMin": 4, "goldMax": 7, "dropRate": 0.55 },
+      "tags": ["cookie", "bomber", "tough"]
+    },
+    {
+      "id": "ginger_snapper",
+      "name": "Ginger-Snapper",
+      "hp": 18,
+      "speed": 110,
+      "damage": 7,
+      "sprite": "ginger_snapper",
+      "behaviors": ["kamikaze"],
+      "loot": { "goldMin": 2, "goldMax": 4, "dropRate": 0.5 },
+      "tags": ["cookie", "fast", "aggressive"]
+    },
+    {
+      "id": "fortune_flyer",
+      "name": "Fortune Flyer",
+      "hp": 15,
+      "speed": 70,
+      "damage": 5,
+      "sprite": "fortune_flyer",
+      "behaviors": ["seek", "burst"],
+      "loot": { "goldMin": 5, "goldMax": 10, "dropRate": 0.8 },
+      "tags": ["cookie", "lucky", "ranged"]
+    },
+    {
+      "id": "wafer_weaver",
+      "name": "Wafer Weaver",
+      "hp": 25,
+      "speed": 45,
+      "damage": 6,
+      "sprite": "wafer_weaver",
+      "behaviors": ["orbit"],
+      "loot": { "goldMin": 3, "goldMax": 6, "dropRate": 0.6 },
+      "tags": ["cookie", "defensive"]
+    },
+    {
+      "id": "sugar_sprite",
+      "name": "Sugar Sprite",
+      "hp": 10,
+      "speed": 100,
+      "damage": 4,
+      "sprite": "sugar_sprite",
+      "behaviors": ["seek"],
+      "loot": { "goldMin": 1, "goldMax": 2, "dropRate": 0.5 },
+      "tags": ["cookie", "small", "fast", "swarm"]
+    },
+    {
+      "id": "caramel_crusher",
+      "name": "Caramel Crusher",
+      "hp": 50,
+      "speed": 35,
+      "damage": 12,
+      "sprite": "caramel_crusher",
+      "behaviors": ["seek"],
+      "loot": { "goldMin": 6, "goldMax": 10, "dropRate": 0.65 },
+      "tags": ["cookie", "tank", "slow"]
+    },
+    {
+      "id": "choco_chunk",
+      "name": "Choco Chunk",
+      "hp": 30,
+      "speed": 55,
+      "damage": 9,
+      "sprite": "choco_chunk",
+      "behaviors": ["seek", "burst"],
+      "loot": { "goldMin": 4, "goldMax": 8, "dropRate": 0.6 },
+      "tags": ["cookie", "medium", "chocolate"]
+    },
+    {
+      "id": "mint_menace",
+      "name": "Mint Menace",
+      "hp": 22,
+      "speed": 65,
+      "damage": 7,
+      "sprite": "mint_menace",
+      "behaviors": ["orbit", "seek"],
+      "loot": { "goldMin": 3, "goldMax": 6, "dropRate": 0.55 },
+      "tags": ["cookie", "mint", "evasive"]
+    },
+    {
+      "id": "almond_asteroid",
+      "name": "Almond Asteroid",
+      "hp": 40,
+      "speed": 40,
+      "damage": 10,
+      "sprite": "almond_asteroid",
+      "behaviors": ["seek"],
+      "onDeath": {
+        "spawn": ["sugar_sprite", "sugar_sprite"]
+      },
+      "loot": { "goldMin": 5, "goldMax": 9, "dropRate": 0.7 },
+      "tags": ["cookie", "splits", "tough"]
+    }
+  ]
+}

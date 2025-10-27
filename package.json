@@ -1,0 +1,32 @@
+{
+  "name": "cookie-space-shooter",
+  "version": "1.0.0",
+  "description": "A cookie-themed space shoot'em up with wave-based survival gameplay",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "pixi.js": "^7.3.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.5",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.8",
+    "vitest": "^1.1.0"
+  },
+  "keywords": [
+    "game",
+    "pixi",
+    "typescript",
+    "shoot-em-up",
+    "cookie"
+  ],
+  "author": "",
+  "license": "MIT"
+}

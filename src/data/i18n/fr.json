@@ -1,0 +1,72 @@
+{
+  "menu": {
+    "title": "Cookie Space Shooter",
+    "play": "Jouer",
+    "continue": "Continuer",
+    "options": "Options",
+    "missions": "Missions",
+    "codex": "Codex",
+    "quit": "Quitter"
+  },
+  "hud": {
+    "wave": "Vague",
+    "gold": "Or",
+    "hp": "PV",
+    "shield": "Bouclier",
+    "kills": "Tués",
+    "fps": "FPS"
+  },
+  "shop": {
+    "title": "Boutique d'Améliorations",
+    "purchase": "Acheter",
+    "reroll": "Relancer",
+    "insufficient": "Pas assez d'or",
+    "continue_wave": "Continuer"
+  },
+  "options": {
+    "title": "Options",
+    "volume": "Volume",
+    "sfx_volume": "Volume Effets",
+    "colorblind": "Mode Daltonien",
+    "reduced_effects": "Effets Réduits",
+    "language": "Langue",
+    "show_fps": "Afficher FPS",
+    "back": "Retour"
+  },
+  "missions": {
+    "title": "Missions",
+    "daily": "Quotidiennes",
+    "weekly": "Hebdomadaires",
+    "longterm": "Long Terme",
+    "progress": "Progrès",
+    "claim": "Réclamer",
+    "completed": "Terminée"
+  },
+  "codex": {
+    "title": "Codex des Ennemis",
+    "enemies": "Ennemis",
+    "bosses": "Boss",
+    "unlocked": "Débloqué",
+    "locked": "???",
+    "stats": "Statistiques",
+    "hp": "PV",
+    "speed": "Vitesse",
+    "damage": "Dégâts"
+  },
+  "gameplay": {
+    "game_over": "Game Over",
+    "victory": "Victoire !",
+    "wave_complete": "Vague Terminée !",
+    "boss_incoming": "Boss en Approche !",
+    "paused": "Pause",
+    "resume": "Reprendre",
+    "restart": "Recommencer",
+    "main_menu": "Menu Principal"
+  },
+  "controls": {
+    "move": "ZQSD / Flèches",
+    "shoot": "Souris / Auto",
+    "dash": "Espace",
+    "pause": "ÉCHAP"
+  }
+}

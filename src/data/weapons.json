@@ -1,0 +1,40 @@
+{
+  "weapons": [
+    {
+      "id": "basic_cannon",
+      "name": "Basic Cannon",
+      "dpsBase": 10,
+      "fireRate": 3,
+      "projectile": { "speed": 400, "size": 8, "pierce": 0 }
+    },
+    {
+      "id": "rapid_fire",
+      "name": "Rapid Fire",
+      "dpsBase": 8,
+      "fireRate": 6,
+      "projectile": { "speed": 450, "size": 6, "pierce": 0 }
+    },
+    {
+      "id": "shotgun",
+      "name": "Cookie Crumbler",
+      "dpsBase": 12,
+      "fireRate": 2,
+      "projectile": { "speed": 350, "size": 10, "pierce": 0 },
+      "spreadDeg": 30
+    },
+    {
+      "id": "piercing_laser",
+      "name": "Microwave Beam",
+      "dpsBase": 15,
+      "fireRate": 2,
+      "projectile": { "speed": 500, "size": 12, "pierce": 3 }
+    },
+    {
+      "id": "splash_cannon",
+      "name": "Caramel Splasher",
+      "dpsBase": 14,
+      "fireRate": 2.5,
+      "projectile": { "speed": 380, "size": 14, "pierce": 0, "splash": 40 }
+    }
+  ]
+}

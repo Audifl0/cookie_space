@@ -1,0 +1,168 @@
+{
+  "upgrades": [
+    {
+      "id": "hp_boost_1",
+      "name": "Sturdy Hull",
+      "description": "Increase max HP by 20",
+      "cost": 10,
+      "apply": { "target": "player", "key": "maxHp", "delta": 20, "mode": "add" }
+    },
+    {
+      "id": "hp_boost_2",
+      "name": "Reinforced Hull",
+      "description": "Increase max HP by 30",
+      "cost": 25,
+      "apply": { "target": "player", "key": "maxHp", "delta": 30, "mode": "add" },
+      "requires": ["hp_boost_1"]
+    },
+    {
+      "id": "speed_boost_1",
+      "name": "Swift Thrusters",
+      "description": "Increase speed by 10%",
+      "cost": 15,
+      "apply": { "target": "player", "key": "speed", "delta": 1.1, "mode": "mul" }
+    },
+    {
+      "id": "speed_boost_2",
+      "name": "Turbo Engines",
+      "description": "Increase speed by 15%",
+      "cost": 30,
+      "apply": { "target": "player", "key": "speed", "delta": 1.15, "mode": "mul" },
+      "requires": ["speed_boost_1"]
+    },
+    {
+      "id": "shield_1",
+      "name": "Energy Shield",
+      "description": "Gain 25 shield points",
+      "cost": 20,
+      "apply": { "target": "player", "key": "maxShield", "delta": 25, "mode": "add" }
+    },
+    {
+      "id": "shield_2",
+      "name": "Advanced Shield",
+      "description": "Gain 40 shield points",
+      "cost": 40,
+      "apply": { "target": "player", "key": "maxShield", "delta": 40, "mode": "add" },
+      "requires": ["shield_1"]
+    },
+    {
+      "id": "shield_regen",
+      "name": "Shield Regeneration",
+      "description": "Increase shield regen rate by 50%",
+      "cost": 35,
+      "apply": { "target": "player", "key": "shieldRegenRate", "delta": 1.5, "mode": "mul" },
+      "requires": ["shield_1"]
+    },
+    {
+      "id": "damage_boost_1",
+      "name": "Power Amplifier",
+      "description": "Increase weapon damage by 15%",
+      "cost": 20,
+      "apply": { "target": "weapon", "key": "damage", "delta": 1.15, "mode": "mul" }
+    },
+    {
+      "id": "damage_boost_2",
+      "name": "Heavy Munitions",
+      "description": "Increase weapon damage by 25%",
+      "cost": 40,
+      "apply": { "target": "weapon", "key": "damage", "delta": 1.25, "mode": "mul" },
+      "requires": ["damage_boost_1"]
+    },
+    {
+      "id": "fire_rate_boost_1",
+      "name": "Rapid Loader",
+      "description": "Increase fire rate by 20%",
+      "cost": 18,
+      "apply": { "target": "weapon", "key": "fireRate", "delta": 1.2, "mode": "mul" }
+    },
+    {
+      "id": "fire_rate_boost_2",
+      "name": "Auto-Loader",
+      "description": "Increase fire rate by 30%",
+      "cost": 35,
+      "apply": { "target": "weapon", "key": "fireRate", "delta": 1.3, "mode": "mul" },
+      "requires": ["fire_rate_boost_1"]
+    },
+    {
+      "id": "pierce_1",
+      "name": "Penetrating Rounds",
+      "description": "Projectiles pierce +1 enemy",
+      "cost": 25,
+      "apply": { "target": "weapon", "key": "pierce", "delta": 1, "mode": "add" }
+    },
+    {
+      "id": "pierce_2",
+      "name": "Hyper-Penetrating Rounds",
+      "description": "Projectiles pierce +2 more enemies",
+      "cost": 50,
+      "apply": { "target": "weapon", "key": "pierce", "delta": 2, "mode": "add" },
+      "requires": ["pierce_1"]
+    },
+    {
+      "id": "splash_1",
+      "name": "Explosive Rounds",
+      "description": "Add 20 splash radius",
+      "cost": 30,
+      "apply": { "target": "weapon", "key": "splash", "delta": 20, "mode": "add" }
+    },
+    {
+      "id": "splash_2",
+      "name": "Mega Explosions",
+      "description": "Increase splash radius by 50%",
+      "cost": 55,
+      "apply": { "target": "weapon", "key": "splash", "delta": 1.5, "mode": "mul" },
+      "requires": ["splash_1"]
+    },
+    {
+      "id": "crit_chance_1",
+      "name": "Lucky Shots",
+      "description": "Gain 10% crit chance",
+      "cost": 22,
+      "apply": { "target": "weapon", "key": "critChance", "delta": 0.1, "mode": "add" }
+    },
+    {
+      "id": "crit_damage_1",
+      "name": "Critical Focus",
+      "description": "Increase crit multiplier by 0.5x",
+      "cost": 28,
+      "apply": { "target": "weapon", "key": "critMultiplier", "delta": 0.5, "mode": "add" },
+      "requires": ["crit_chance_1"]
+    },
+    {
+      "id": "gold_boost_1",
+      "name": "Gold Magnet",
+      "description": "Increase gold gain by 20%",
+      "cost": 15,
+      "apply": { "target": "economy", "key": "goldMultiplier", "delta": 1.2, "mode": "mul" }
+    },
+    {
+      "id": "gold_boost_2",
+      "name": "Treasure Hunter",
+      "description": "Increase gold gain by 30%",
+      "cost": 35,
+      "apply": { "target": "economy", "key": "goldMultiplier", "delta": 1.3, "mode": "mul" },
+      "requires": ["gold_boost_1"]
+    },
+    {
+      "id": "loot_magnet",
+      "name": "Loot Vacuum",
+      "description": "Increase loot attraction radius by 50%",
+      "cost": 20,
+      "apply": { "target": "player", "key": "lootMagnetRadius", "delta": 1.5, "mode": "mul" }
+    },
+    {
+      "id": "drop_rate_boost",
+      "name": "Fortune's Favor",
+      "description": "Increase drop rate by 15%",
+      "cost": 25,
+      "apply": { "target": "economy", "key": "dropRateBonus", "delta": 0.15, "mode": "add" }
+    },
+    {
+      "id": "dash_cooldown",
+      "name": "Quick Dash",
+      "description": "Reduce dash cooldown by 30%",
+      "cost": 25,
+      "apply": { "target": "player", "key": "dashCooldown", "delta": 0.7, "mode": "mul" }
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "name": "Cookie Space Shooter",
+  "short_name": "CookieSpace",
+  "description": "A delicious wave-based space shoot'em up",
+  "start_url": "/",
+  "display": "fullscreen",
+  "background_color": "#000000",
+  "theme_color": "#ffd700",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

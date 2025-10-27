@@ -1,0 +1,39 @@
+{
+  "waves": [
+    { "index": 1, "enemies": [{ "id": "chip_drone", "count": 10, "spawnRatePerSec": 1.5 }] },
+    { "index": 2, "enemies": [{ "id": "chip_drone", "count": 15, "spawnRatePerSec": 2 }] },
+    { "index": 3, "enemies": [{ "id": "chip_drone", "count": 12, "spawnRatePerSec": 2 }, { "id": "sugar_sprite", "count": 8, "spawnRatePerSec": 1.5 }], "bgTheme": "nebula_vanilla" },
+    { "index": 4, "enemies": [{ "id": "oreo_orbiter", "count": 8, "spawnRatePerSec": 1 }, { "id": "chip_drone", "count": 10, "spawnRatePerSec": 2 }] },
+    { "index": 5, "enemies": [{ "id": "ginger_snapper", "count": 12, "spawnRatePerSec": 2 }, { "id": "macaron_mine", "count": 5, "spawnRatePerSec": 0.5 }], "modifiers": ["fast"], "boss": { "id": "grand_four_sombre", "delaySec": 0 } },
+
+    { "index": 6, "enemies": [{ "id": "fortune_flyer", "count": 10, "spawnRatePerSec": 1.5 }, { "id": "chip_drone", "count": 15, "spawnRatePerSec": 2 }] },
+    { "index": 7, "enemies": [{ "id": "wafer_weaver", "count": 8, "spawnRatePerSec": 1 }, { "id": "oreo_orbiter", "count": 10, "spawnRatePerSec": 1.5 }], "bgTheme": "nebula_caramel" },
+    { "index": 8, "enemies": [{ "id": "biscotti_bomber", "count": 10, "spawnRatePerSec": 1.2 }, { "id": "sugar_sprite", "count": 20, "spawnRatePerSec": 3 }] },
+    { "index": 9, "enemies": [{ "id": "choco_chunk", "count": 12, "spawnRatePerSec": 1.5 }, { "id": "ginger_snapper", "count": 10, "spawnRatePerSec": 2 }], "modifiers": ["tank"] },
+    { "index": 10, "enemies": [{ "id": "mint_menace", "count": 15, "spawnRatePerSec": 2 }, { "id": "macaron_mine", "count": 8, "spawnRatePerSec": 0.8 }], "boss": { "id": "grand_four_sombre", "delaySec": 0 } },
+
+    { "index": 11, "enemies": [{ "id": "almond_asteroid", "count": 8, "spawnRatePerSec": 1 }, { "id": "chip_drone", "count": 20, "spawnRatePerSec": 2.5 }], "bgTheme": "meteor_almond" },
+    { "index": 12, "enemies": [{ "id": "caramel_crusher", "count": 6, "spawnRatePerSec": 0.8 }, { "id": "fortune_flyer", "count": 12, "spawnRatePerSec": 1.5 }] },
+    { "index": 13, "enemies": [{ "id": "oreo_orbiter", "count": 15, "spawnRatePerSec": 2 }, { "id": "wafer_weaver", "count": 10, "spawnRatePerSec": 1.2 }], "modifiers": ["double_loot"] },
+    { "index": 14, "enemies": [{ "id": "biscotti_bomber", "count": 12, "spawnRatePerSec": 1.5 }, { "id": "mint_menace", "count": 12, "spawnRatePerSec": 1.5 }] },
+    { "index": 15, "enemies": [{ "id": "choco_chunk", "count": 15, "spawnRatePerSec": 2 }, { "id": "ginger_snapper", "count": 15, "spawnRatePerSec": 2.5 }], "modifiers": ["fast"], "boss": { "id": "la_gaufrette_reine", "delaySec": 0 } },
+
+    { "index": 16, "enemies": [{ "id": "sugar_sprite", "count": 40, "spawnRatePerSec": 4 }, { "id": "macaron_mine", "count": 10, "spawnRatePerSec": 1 }], "bgTheme": "nebula_strawberry" },
+    { "index": 17, "enemies": [{ "id": "almond_asteroid", "count": 10, "spawnRatePerSec": 1.2 }, { "id": "caramel_crusher", "count": 8, "spawnRatePerSec": 1 }], "modifiers": ["tank"] },
+    { "index": 18, "enemies": [{ "id": "fortune_flyer", "count": 18, "spawnRatePerSec": 2 }, { "id": "oreo_orbiter", "count": 15, "spawnRatePerSec": 2 }] },
+    { "index": 19, "enemies": [{ "id": "wafer_weaver", "count": 15, "spawnRatePerSec": 1.5 }, { "id": "biscotti_bomber", "count": 12, "spawnRatePerSec": 1.5 }], "modifiers": ["mirror"] },
+    { "index": 20, "enemies": [{ "id": "mint_menace", "count": 20, "spawnRatePerSec": 2.5 }, { "id": "choco_chunk", "count": 15, "spawnRatePerSec": 2 }], "boss": { "id": "le_rouleau_compresseur", "delaySec": 0 } },
+
+    { "index": 21, "enemies": [{ "id": "chip_drone", "count": 30, "spawnRatePerSec": 3 }, { "id": "ginger_snapper", "count": 20, "spawnRatePerSec": 2.5 }], "bgTheme": "nebula_mint" },
+    { "index": 22, "enemies": [{ "id": "almond_asteroid", "count": 12, "spawnRatePerSec": 1.5 }, { "id": "caramel_crusher", "count": 10, "spawnRatePerSec": 1.2 }], "modifiers": ["tank", "double_loot"] },
+    { "index": 23, "enemies": [{ "id": "macaron_mine", "count": 15, "spawnRatePerSec": 1.5 }, { "id": "fortune_flyer", "count": 20, "spawnRatePerSec": 2 }] },
+    { "index": 24, "enemies": [{ "id": "oreo_orbiter", "count": 20, "spawnRatePerSec": 2.5 }, { "id": "wafer_weaver", "count": 15, "spawnRatePerSec": 2 }], "modifiers": ["fast"] },
+    { "index": 25, "enemies": [{ "id": "biscotti_bomber", "count": 18, "spawnRatePerSec": 2 }, { "id": "mint_menace", "count": 18, "spawnRatePerSec": 2 }], "boss": { "id": "king_choco_chunk", "delaySec": 0 } },
+
+    { "index": 26, "enemies": [{ "id": "choco_chunk", "count": 20, "spawnRatePerSec": 2.5 }, { "id": "sugar_sprite", "count": 50, "spawnRatePerSec": 5 }], "bgTheme": "nebula_chocolate" },
+    { "index": 27, "enemies": [{ "id": "almond_asteroid", "count": 15, "spawnRatePerSec": 2 }, { "id": "ginger_snapper", "count": 25, "spawnRatePerSec": 3 }], "modifiers": ["fast", "mirror"] },
+    { "index": 28, "enemies": [{ "id": "caramel_crusher", "count": 12, "spawnRatePerSec": 1.5 }, { "id": "fortune_flyer", "count": 25, "spawnRatePerSec": 2.5 }] },
+    { "index": 29, "enemies": [{ "id": "oreo_orbiter", "count": 25, "spawnRatePerSec": 3 }, { "id": "wafer_weaver", "count": 20, "spawnRatePerSec": 2.5 }], "modifiers": ["tank", "double_loot"] },
+    { "index": 30, "enemies": [{ "id": "biscotti_bomber", "count": 20, "spawnRatePerSec": 2.5 }, { "id": "mint_menace", "count": 20, "spawnRatePerSec": 2.5 }, { "id": "choco_chunk", "count": 20, "spawnRatePerSec": 2.5 }], "boss": { "id": "supreme_biscuit", "delaySec": 0 } }
+  ]
+}

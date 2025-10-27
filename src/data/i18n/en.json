@@ -1,0 +1,72 @@
+{
+  "menu": {
+    "title": "Cookie Space Shooter",
+    "play": "Play",
+    "continue": "Continue",
+    "options": "Options",
+    "missions": "Missions",
+    "codex": "Codex",
+    "quit": "Quit"
+  },
+  "hud": {
+    "wave": "Wave",
+    "gold": "Gold",
+    "hp": "HP",
+    "shield": "Shield",
+    "kills": "Kills",
+    "fps": "FPS"
+  },
+  "shop": {
+    "title": "Upgrade Shop",
+    "purchase": "Purchase",
+    "reroll": "Reroll",
+    "insufficient": "Not enough gold",
+    "continue_wave": "Continue"
+  },
+  "options": {
+    "title": "Options",
+    "volume": "Volume",
+    "sfx_volume": "SFX Volume",
+    "colorblind": "Colorblind Mode",
+    "reduced_effects": "Reduced Effects",
+    "language": "Language",
+    "show_fps": "Show FPS",
+    "back": "Back"
+  },
+  "missions": {
+    "title": "Missions",
+    "daily": "Daily",
+    "weekly": "Weekly",
+    "longterm": "Long-term",
+    "progress": "Progress",
+    "claim": "Claim",
+    "completed": "Completed"
+  },
+  "codex": {
+    "title": "Enemy Codex",
+    "enemies": "Enemies",
+    "bosses": "Bosses",
+    "unlocked": "Unlocked",
+    "locked": "???",
+    "stats": "Stats",
+    "hp": "HP",
+    "speed": "Speed",
+    "damage": "Damage"
+  },
+  "gameplay": {
+    "game_over": "Game Over",
+    "victory": "Victory!",
+    "wave_complete": "Wave Complete!",
+    "boss_incoming": "Boss Incoming!",
+    "paused": "Paused",
+    "resume": "Resume",
+    "restart": "Restart",
+    "main_menu": "Main Menu"
+  },
+  "controls": {
+    "move": "WASD / Arrows",
+    "shoot": "Mouse / Auto",
+    "dash": "Space",
+    "pause": "ESC"
+  }
+}
