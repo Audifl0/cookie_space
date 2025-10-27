@@ -3,11 +3,11 @@
  */
 
 import { Graphics, Container, Text } from 'pixi.js';
-import type { Enemy as EnemyType, BossSpec, Position, Velocity, BossPhase } from '../types';
+import type { BossSpec, BossPhase } from '../types';
 import { Enemy } from './Enemy';
 
-export class Boss extends Enemy implements EnemyType {
-  type: 'boss' = 'boss';
+export class Boss extends Enemy {
+  override type: 'boss' = 'boss';
   phases: BossPhase[];
   currentPhaseIndex: number = 0;
   phaseStartTime: number = 0;
@@ -30,12 +30,23 @@ export class Boss extends Enemy implements EnemyType {
     this.nameText = this.createNameText(spec.name);
   }
 
+  private getColorForBoss(id: string): number {
+    const colors: Record<string, number> = {
+      grand_four_sombre: 0xff4400,
+      la_gaufrette_reine: 0xf5deb3,
+      le_rouleau_compresseur: 0x888888,
+      king_choco_chunk: 0x7b3f00,
+      supreme_biscuit: 0xffd700,
+    };
+    return colors[id] ?? 0xff0000;
+  }
+
   private createBossSprite(spec: BossSpec): Container {
     const container = new Container();
 
     // Boss body (larger, more detailed)
     const body = new Graphics();
-    const color = this.getColorForEnemy(spec.id);
+    const color = this.getColorForBoss(spec.id);
 
     body.beginFill(color);
     body.drawCircle(0, 0, this.radius);
@@ -78,7 +89,7 @@ export class Boss extends Enemy implements EnemyType {
     return text;
   }
 
-  update(dt: number): void {
+  override update(dt: number): void {
     super.update(dt);
 
     // Update phase timer

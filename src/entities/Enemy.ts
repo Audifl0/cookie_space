@@ -3,14 +3,14 @@
  */
 
 import { Graphics, Container } from 'pixi.js';
-import type { Enemy as EnemyType, EnemySpec, Position, Velocity, BehaviorType } from '../types';
+import type { EnemySpec, BehaviorType } from '../types';
 
-export class Enemy implements EnemyType {
+export class Enemy {
   id: string;
-  type: 'enemy' = 'enemy';
+  type: 'enemy' | 'boss' = 'enemy';
   specId: string;
-  position: Position;
-  velocity: Velocity;
+  position: { x: number; y: number };
+  velocity: { vx: number; vy: number };
   radius: number = 12;
   active: boolean = true;
 
@@ -23,7 +23,7 @@ export class Enemy implements EnemyType {
   // Behavior state
   orbitAngle?: number;
   orbitRadius?: number;
-  targetPosition?: Position;
+  targetPosition?: { x: number; y: number };
 
   sprite: Container;
   spec: EnemySpec;
@@ -82,7 +82,7 @@ export class Enemy implements EnemyType {
     return container;
   }
 
-  private getColorForEnemy(id: string): number {
+  protected getColorForEnemy(id: string): number {
     const colors: Record<string, number> = {
       chip_drone: 0xd4a574,
       oreo_orbiter: 0x3d2817,
