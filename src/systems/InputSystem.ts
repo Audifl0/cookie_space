@@ -186,7 +186,7 @@ export class InputSystem {
     };
   }
 
-  update(dt: number): void {
+  update(_dt: number): void {
     // Update is called each frame
   }
 

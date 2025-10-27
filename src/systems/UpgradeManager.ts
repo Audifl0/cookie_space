@@ -12,7 +12,7 @@ export class UpgradeManager {
 
   constructor() {
     this.upgrades = new Map();
-    upgradesData.upgrades.forEach(u => this.upgrades.set(u.id, u));
+    upgradesData.upgrades.forEach(u => this.upgrades.set(u.id, u as Upgrade));
   }
 
   /**

@@ -21,14 +21,12 @@ interface ShopCard {
 export class Shop {
   private container: Container;
   private width: number;
-  private height: number;
 
   private cards: ShopCard[] = [];
   private gold: number = 0;
 
-  constructor(width: number, height: number) {
+  constructor(width: number, _height: number) {
     this.width = width;
-    this.height = height;
     this.container = new Container();
 
     this.setupInteraction();

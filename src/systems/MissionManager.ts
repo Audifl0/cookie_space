@@ -12,7 +12,7 @@ export class MissionManager {
 
   constructor() {
     this.missions = new Map();
-    missionsData.missions.forEach(m => this.missions.set(m.id, m));
+    missionsData.missions.forEach(m => this.missions.set(m.id, m as MissionSpec));
 
     this.progress = new Map();
     this.initializeMissions();
@@ -21,7 +21,7 @@ export class MissionManager {
   }
 
   private initializeMissions(): void {
-    for (const [id, spec] of this.missions) {
+    for (const [id] of this.missions) {
       this.progress.set(id, {
         id,
         progress: 0,

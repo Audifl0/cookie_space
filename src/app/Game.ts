@@ -68,7 +68,6 @@ export class Game {
   private state: GameState;
   private economyStats: EconomyStats;
 
-  private gold: number = 0;
   private kills: number = 0;
 
   private lastTime: number = 0;
@@ -344,7 +343,7 @@ export class Game {
     this.audio.playShoot();
   }
 
-  private updateEnemyAI(enemy: Enemy, dt: number): void {
+  private updateEnemyAI(enemy: Enemy, _dt: number): void {
     const dx = this.player.position.x - enemy.position.x;
     const dy = this.player.position.y - enemy.position.y;
     const dist = Math.sqrt(dx * dx + dy * dy);
@@ -570,7 +569,6 @@ export class Game {
   private collectLoot(loot: Loot): void {
     const goldGained = Math.floor(loot.goldValue * this.economyStats.goldMultiplier);
     this.state.gold += goldGained;
-    this.gold = this.state.gold;
 
     gameEvents.emit('gold_collected', { amount: goldGained });
 
@@ -632,13 +630,12 @@ export class Game {
 
     if (result.success) {
       this.state.gold = result.newGold;
-      this.gold = result.newGold;
 
       // Reapply all upgrades
       this.upgradeManager.applyUpgrades(this.player.stats, this.player.weaponStats, this.economyStats);
 
       // Save
-      this.save.setOwnedUpgrades(this.upgradeManager.getOwnedUpgrades());
+      this.save.addUpgrade(upgradeId);
       this.save.setGold(this.state.gold);
 
       // Update shop display
@@ -772,7 +769,11 @@ export class Game {
   }
 
   private showMenu(type: 'title' | 'pause' | 'gameover'): void {
-    this.phase = type;
+    if (type === 'pause') {
+      this.phase = 'paused';
+    } else {
+      this.phase = type;
+    }
 
     if (this.currentMenu) {
       this.currentMenu.destroy();

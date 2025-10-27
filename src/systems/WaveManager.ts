@@ -31,13 +31,13 @@ export class WaveManager {
   private bossDelay: number = 0;
 
   constructor() {
-    this.waves = wavesData.waves;
+    this.waves = wavesData.waves as WaveSpec[];
 
     this.enemies = new Map();
-    enemiesData.enemies.forEach(e => this.enemies.set(e.id, e));
+    enemiesData.enemies.forEach(e => this.enemies.set(e.id, e as EnemySpec));
 
     this.bosses = new Map();
-    bossesData.bosses.forEach(b => this.bosses.set(b.id, b as BossSpec));
+    bossesData.bosses.forEach(b => this.bosses.set(b.id, b as unknown as BossSpec));
   }
 
   startWave(waveIndex: number): void {
