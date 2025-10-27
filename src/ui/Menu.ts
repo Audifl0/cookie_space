@@ -188,6 +188,8 @@ export class Menu {
 
   private setupInteraction(): void {
     this.container.interactive = true;
+    this.container.eventMode = 'static';
+    this.container.cursor = 'pointer';
 
     this.container.on('pointermove', (event) => {
       const pos = event.data.global;

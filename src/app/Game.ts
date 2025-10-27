@@ -225,9 +225,8 @@ export class Game {
     }
 
     // Player movement
-    const moveSpeed = this.player.stats.speed * dt;
-    this.player.velocity.vx = inputState.moveX * moveSpeed;
-    this.player.velocity.vy = inputState.moveY * moveSpeed;
+    this.player.velocity.vx = inputState.moveX * this.player.stats.speed;
+    this.player.velocity.vy = inputState.moveY * this.player.stats.speed;
 
     // Player rotation (aim at mouse/touch)
     if (!inputState.touchActive) {
@@ -255,8 +254,8 @@ export class Game {
       this.audio.playDash();
       // Apply dash velocity
       const dashSpeed = 500;
-      this.player.velocity.vx = Math.cos(this.player.rotation) * dashSpeed * dt;
-      this.player.velocity.vy = Math.sin(this.player.rotation) * dashSpeed * dt;
+      this.player.velocity.vx = Math.cos(this.player.rotation) * dashSpeed;
+      this.player.velocity.vy = Math.sin(this.player.rotation) * dashSpeed;
     }
 
     // Update player
@@ -284,7 +283,13 @@ export class Game {
 
     // Update projectiles
     for (const projectile of this.projectiles) {
-      if (!projectile.active) continue;
+      if (!projectile.active) {
+        // Remove inactive projectiles (from hits)
+        if (projectile.sprite.visible) {
+          this.removeProjectile(projectile);
+        }
+        continue;
+      }
       projectile.update(dt);
 
       // Remove off-screen projectiles
