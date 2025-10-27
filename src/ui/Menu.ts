@@ -2,7 +2,7 @@
  * Menu system - title screen, pause menu, game over, etc.
  */
 
-import { Container, Graphics, Text } from 'pixi.js';
+import { Container, Graphics, Text, Rectangle } from 'pixi.js';
 import { gameEvents } from '../utils/events';
 
 export type MenuType = 'title' | 'pause' | 'shop' | 'gameover' | 'victory' | 'wave_complete';
@@ -42,7 +42,6 @@ export class Menu {
     this.container.addChild(this.background);
 
     this.build();
-    this.setupInteraction();
   }
 
   private build(): void {
@@ -166,6 +165,26 @@ export class Menu {
 
     this.drawButton(button, false);
 
+    // Make button interactive
+    graphics.interactive = true;
+    graphics.eventMode = 'static';
+    graphics.cursor = 'pointer';
+    graphics.hitArea = new Rectangle(button.x, button.y, button.width, button.height);
+
+    // Button hover effect
+    graphics.on('pointerover', () => {
+      this.drawButton(button, true);
+    });
+
+    graphics.on('pointerout', () => {
+      this.drawButton(button, false);
+    });
+
+    // Button click handler
+    graphics.on('pointerdown', () => {
+      gameEvents.emit('menu_action', { action: button.action });
+    });
+
     this.container.addChild(graphics);
     this.container.addChild(label);
 
@@ -184,42 +203,6 @@ export class Menu {
 
     button.graphics.lineStyle(3, 0xffffff, 0.8);
     button.graphics.drawRoundedRect(button.x, button.y, button.width, button.height, 8);
-  }
-
-  private setupInteraction(): void {
-    this.container.interactive = true;
-    this.container.eventMode = 'static';
-    this.container.cursor = 'pointer';
-
-    this.container.on('pointermove', (event) => {
-      const pos = event.data.global;
-
-      for (const button of this.buttons) {
-        const hover =
-          pos.x >= button.x &&
-          pos.x <= button.x + button.width &&
-          pos.y >= button.y &&
-          pos.y <= button.y + button.height;
-
-        this.drawButton(button, hover);
-      }
-    });
-
-    this.container.on('pointerdown', (event) => {
-      const pos = event.data.global;
-
-      for (const button of this.buttons) {
-        const clicked =
-          pos.x >= button.x &&
-          pos.x <= button.x + button.width &&
-          pos.y >= button.y &&
-          pos.y <= button.y + button.height;
-
-        if (clicked) {
-          gameEvents.emit('menu_action', { action: button.action });
-        }
-      }
-    });
   }
 
   getContainer(): Container {

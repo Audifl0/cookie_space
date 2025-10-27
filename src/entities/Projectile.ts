@@ -89,6 +89,7 @@ export class Projectile implements ProjectileType {
 
     if (this.piercedCount > this.pierce) {
       this.active = false;
+      this.sprite.visible = false;
       return true; // Destroyed
     }
 
