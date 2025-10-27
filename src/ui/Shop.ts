@@ -2,7 +2,7 @@
  * Shop UI for upgrades
  */
 
-import { Container, Graphics, Text } from 'pixi.js';
+import { Container, Graphics, Text, Rectangle } from 'pixi.js';
 import type { Upgrade } from '../types';
 import { gameEvents } from '../utils/events';
 
@@ -28,8 +28,6 @@ export class Shop {
   constructor(width: number, _height: number) {
     this.width = width;
     this.container = new Container();
-
-    this.setupInteraction();
   }
 
   displayOffers(upgrades: Upgrade[], currentGold: number): void {
@@ -107,6 +105,30 @@ export class Shop {
 
     this.drawCard(card, false);
 
+    // Make card interactive
+    graphics.interactive = true;
+    graphics.eventMode = 'static';
+    graphics.cursor = 'pointer';
+    graphics.hitArea = new Rectangle(x, y, width, height);
+
+    // Hover effect
+    graphics.on('pointerover', () => {
+      if (this.gold >= upgrade.cost) {
+        this.drawCard(card, true);
+      }
+    });
+
+    graphics.on('pointerout', () => {
+      this.drawCard(card, false);
+    });
+
+    // Click handler
+    graphics.on('pointerdown', () => {
+      if (this.gold >= upgrade.cost) {
+        gameEvents.emit('shop_purchase', { upgradeId: upgrade.id });
+      }
+    });
+
     return card;
   }
 
@@ -128,40 +150,6 @@ export class Shop {
 
     card.graphics.lineStyle(3, hover ? 0xffd700 : 0xffffff, 0.6);
     card.graphics.drawRoundedRect(card.x, card.y, card.width, card.height, 10);
-  }
-
-  private setupInteraction(): void {
-    this.container.interactive = true;
-
-    this.container.on('pointermove', (event) => {
-      const pos = event.data.global;
-
-      for (const card of this.cards) {
-        const hover =
-          pos.x >= card.x &&
-          pos.x <= card.x + card.width &&
-          pos.y >= card.y &&
-          pos.y <= card.y + card.height;
-
-        this.drawCard(card, hover);
-      }
-    });
-
-    this.container.on('pointerdown', (event) => {
-      const pos = event.data.global;
-
-      for (const card of this.cards) {
-        const clicked =
-          pos.x >= card.x &&
-          pos.x <= card.x + card.width &&
-          pos.y >= card.y &&
-          pos.y <= card.y + card.height;
-
-        if (clicked && this.gold >= card.upgrade.cost) {
-          gameEvents.emit('shop_purchase', { upgradeId: card.upgrade.id });
-        }
-      }
-    });
   }
 
   getContainer(): Container {

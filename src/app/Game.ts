@@ -610,8 +610,6 @@ export class Game {
     this.save.setHighestWave(this.state.currentWave);
     this.save.setGold(this.state.gold);
 
-    gameEvents.emit('wave_cleared', { wave: this.state.currentWave, noHit: this.state.noHitCurrentWave });
-
     // Show shop
     this.showShop();
   }
